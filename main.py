@@ -33,7 +33,7 @@ async def home(request: Request):
                         <img src="{os.environ.get('INITIAL_IMAGE_URL')}" alt="{os.environ.get('TITLE')}">
                     </div>
                     <div>
-                        <a href="https://pinata.cloud" target="_blank">Powered by Nebula Nodes</a>
+                        <a href="https://nebulanotes.up.railway.app/" target="_blank">Powered by Nebula Nodes</a>
                     </div>
                 </body>
             </html>
