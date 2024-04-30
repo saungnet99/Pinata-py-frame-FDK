@@ -23,6 +23,9 @@ async def home(request: Request):
                     <meta property="fc:frame" content="vNext" />
                     <meta property="fc:frame:button:1" content="Mint" />
                     <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=1" />
+                    <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=2" />
+                    <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=3" />
+                    <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=4" />
                 </head>
                 <body>
                     <h1>{os.environ.get('TITLE')} on Farcaster!</h1>
