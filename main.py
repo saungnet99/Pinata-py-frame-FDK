@@ -23,9 +23,6 @@ async def home(request: Request):
                     <meta property="fc:frame" content="vNext" />
                     <meta property="fc:frame:button:1" content="Mint" />
                     <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=1" />
-                    <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=2" />
-                    <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=3" />
-                    <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame=4" />
                 </head>
                 <body>
                     <h1>{os.environ.get('TITLE')} on Farcaster!</h1>
@@ -61,13 +58,13 @@ async def view(request: Request):
                     <title>This is frame {frame_index}</title>
                     <meta property="og:title" content="Frame" />
                     <meta property="fc:frame" content="vNext" />
-                    <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/{frame_index}.jpg" />
+                    <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/{frame_index}.jpeg" />
                     <meta property="fc:frame:button:1" content="{os.environ.get('TITLE')}" />
                     <meta property="fc:frame:button:1:action" content="link" />
                     <meta property="fc:frame:button:1:target" content="{os.environ.get('EXTERNAL_URL')}" />
                     <meta property="fc:frame:button:2" content="Built With..." />
                     <meta property="fc:frame:button:2:action" content="link" />
-                    <meta property="fc:frame:button:2:target" content="https://pinata.cloud" />
+                    <meta property="fc:frame:button:2:target" content="https://nebulanotes.up.railway.app" />
                     </head></html>"""
             )
         )    
@@ -79,7 +76,7 @@ async def view(request: Request):
                     <title>This is frame {frame_index}</title>
                     <meta property="og:title" content="Frame" />
                     <meta property="fc:frame" content="vNext" />
-                    <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/{frame_index}.jpg" />
+                    <meta property="fc:frame:image" content="{os.environ.get('GATEWAY_URL')}/ipfs/{os.environ.get('FOLDER_CID')}/{frame_index}.jpeg" />
                     <meta property="fc:frame:button:1" content="Next" />
                     <meta property="fc:frame:post_url" content="{os.environ.get('PROJECT_URL')}/view?frame={next_frame}" />
                     </head></html>"""
